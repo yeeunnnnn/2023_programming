@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <liLnk href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="assets/css/css1.css">
+
+    <title>Yeeun Blog</title>
+    <script>
+        // 서버로 API 요청을 보내고 응답을 JSON으로 변환하여 처리하는 코드
+        fetch('http://localhost:80/api')
+          .then((res) => res.json())
+          .then((res) => {
+            // 웹 페이지의 테이블 요소를 선택
+            const table = document.querySelector('table');
+      
+            // 응답 데이터를 반복하여 테이블에 추가
+            res.forEach((row) => {
+              // 새로운 행(tr) 요소 생성
+              const tr = document.createElement('tr');
+      
+              // 테이블의 각 셀(td) 생성 및 데이터 삽입
+              ['id', 'name', 'msg'].forEach((key) => {
+                const cell = document.createElement('td');
+                cell.textContent = row[key];
+                tr.appendChild(cell);
+              });
+      
+              // 테이블에 행 추가
+              table.appendChild(tr);
+            });
+          });
+      </script>
+</head>
+<body>
+
+    <!-- 헤더 맹둘기 시작 -->
+    <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- 헤더애 이름 -->
+                      <a href="index.html" class="logo">
+                          .yeeun
+                      </a>
+                      <!-- 헤더애 이름 -->
+                      <!-- 헤더애 목록 -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                          <li class="scroll-to-section"><a href="#about">About</a></li>
+                          <li class="submenu">
+                              <a href="javascript:;">list</a>
+                              <ul>
+                                  <li><a href="page/page1.html">aa</a></li>
+                                  <li><a href="page/page2.html">bb</a></li>
+                                  <li><a href="page/page3.html">cc</a></li>
+                                  <li><a href="page/page4.html">dd</a></li>
+                              </ul>
+                          </li>
+                      </ul>        
+                      <!-- 헤더애 목록 -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- 헤더 맹둘기 끝 -->
+
+  <!-- 메인 페이지 배너 맹둘기 -->
+      <div class="main-banner header-text" id="top">
+          <!-- 배너 -->
+          <div class="item">
+            <div class="img-fill">
+                <img src="assets/images/001.jpg" alt="">
+                <div class="text-content">
+                  <h3>----------</h3>
+                  <h5>옌 : Florescence</h5>
+                </div>
+            </div>
+          </div>
+          <!-- 배너 -->
+    </div>
+    <!-- 메인 페이지 배너 맹둘기 끝 -->
+
+    <!-- About 배너 맹둘기 -->
+    <section class="section" id="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6 col-md-6 col-xs-12">
+                  <div class="left-text-content">
+                      <div class="section-heading">
+                          <h6>About</h6>
+                          <h2>큰 글씨</h2>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12">
+                  <div class="right-text-content">
+                      <p>작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨작은글씨</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- About 배너 맹둘기 끝 -->
+
+      <!-- 바닥 -->
+      <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12">
+                    <div class="left-text-content">
+                        <p> email : sugh002@naver.com </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <div class="right-text-content">
+                            <ul class="social-icons">
+                                <li><p>My URL</p></li>
+                                <li><a rel="nofollow" href="https://github.com/yeeunnnnn"><i class="fa-brands fa-github-square"></i></a></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+      <!-- 바닥 끝-->
+
+      <script src="https://kit.fontawesome.com/35c06885f6.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
